@@ -1,18 +1,18 @@
-// const throttle = require('lodash.throttle');
+const throttle = require('lodash.throttle');
 
 
-// const formRef = document.querySelector(".feedback-form");
-// const inputRef = document.querySelector("input");
-// const textareaRef = document.querySelector("textarea");
+const formRef = document.querySelector(".feedback-form");
+const inputRef = document.querySelector("input");
+const textareaRef = document.querySelector("textarea");
 
-// getFormData();
+getFormData();
 
-// formRef.addEventListener("input", throttle(onFormInput,500));
-// formRef.addEventListener("submit", onFormSubmit);
+formRef.addEventListener("input", throttle(onFormInput,500));
+formRef.addEventListener("submit", onFormSubmit);
 
-//   const formData = {
+  const formData = {
   
-// };
+};
   
 
 function onFormInput(event) {
