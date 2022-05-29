@@ -1,0 +1,2 @@
+function onFormInput(e){formData[e.target.name]=e.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(formData))}function onFormSubmit(e){e.preventDefault(),localStorage.getItem("feedback-form-state")&&console.log(localStorage.getItem("feedback-form-state")),localStorage.removeItem("feedback-form-state"),e.currentTarget.reset()}function getFormData(){var e=localStorage.getItem("feedback-form-state"),t=JSON.parse(e);null!==t&&(inputRef.value=t.email||"",textareaRef.value=t.message||"")}
+//# sourceMappingURL=03-feedback.65574215.js.map
