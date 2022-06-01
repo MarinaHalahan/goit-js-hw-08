@@ -12,13 +12,11 @@ formRef.addEventListener("submit", onFormSubmit);
 
 getFormData();
 
-let formData = JSON.parse(localStorage.getItem("feedback-form-state")) || {};
-
   
 
 function onFormInput(event) {
-  console.log(event.target.name);
-
+  
+  const formData = JSON.parse(localStorage.getItem("feedback-form-state")) || {};
   formData[event.target.name] = event.target.value;
   localStorage.setItem("feedback-form-state", JSON.stringify(formData));
 
@@ -26,12 +24,14 @@ function onFormInput(event) {
 
 function onFormSubmit(event) {
   event.preventDefault();
+  constDataRequired = JSON.parse(localStorage.getItem("feedback-form-state"));
+  if (!constDataRequired.email || !constDataRequired.message) {
+    return;
+  }
 
-  localStorage.getItem("feedback-form-state");
   console.log(localStorage.getItem("feedback-form-state"));
-      
- localStorage.removeItem("feedback-form-state");
-    event.currentTarget.reset();
+  event.currentTarget.reset();
+  localStorage.removeItem("feedback-form-state");
   
 };
 
